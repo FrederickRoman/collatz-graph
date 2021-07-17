@@ -1,4 +1,6 @@
-function collatzOrbitToCSV(collatzOrbit: number[] | bigint[]): string {
+import orbit from "@/types/unions/orbit";
+
+function collatzOrbitToCSV(collatzOrbit: orbit): string {
   return collatzOrbit.join("\n");
 }
 

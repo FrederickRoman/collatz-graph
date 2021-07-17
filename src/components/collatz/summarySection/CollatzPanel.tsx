@@ -1,34 +1,18 @@
 import { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
-
-import collatzCompute from "../../../services/computeCollatz/collatzSafeInt";
-import collatzBigInt from "../../../services/computeCollatz/collatzBigInt.js";
-
-import CollatzTable from "./collatzOutputSections/collatzResultsTableSection/CollatzTable";
-
-import CollatzTabs from "./collatzInputSection/collatzTabsSection/CollatzTabs";
 
 import fromExponential from "from-exponential";
 
-const workerURL = `/workers/collatzBigIntWorker.js`;
+import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    margin: "1em 0em",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-  },
-}));
+import collatzCompute from "@/services/computeCollatz/collatzSafeInt";
+import collatzBigInt from "@/services/computeCollatz/collatzBigInt.js";
+
+import CollatzTable from "./collatzOutputSections/collatzResultsTableSection/CollatzTable";
+import CollatzTabs from "./collatzInputSection/collatzTabsSection/CollatzTabs";
+
+const workerURL = `/workers/collatzBigIntWorker.js`;
 
 interface ICollatzPanelProps {
   orbit: number[] | bigint[];
@@ -50,8 +34,6 @@ function CollatzPanel(props: ICollatzPanelProps) {
   const [peak, setPeak] = useState(DEFAULT_PEAK);
 
   const [worker, setWorker] = useState<Worker | null>(null);
-
-  const classes = useStyles();
 
   useEffect(() => {
     if (tab === "small") {
@@ -82,9 +64,6 @@ function CollatzPanel(props: ICollatzPanelProps) {
 
   useEffect(() => {
     if (tab === "big") {
-      // const expStringNumber = fromExponential(bigNumber);
-      // const collatzBigIntSequence = collatzBigInt(bigNumber);
-      // setOrbit(collatzBigIntSequence);
       if (worker) {
         worker.postMessage(bigNumber);
         worker.onerror = (err) => console.log(err);
@@ -112,7 +91,6 @@ function CollatzPanel(props: ICollatzPanelProps) {
     setResults(orbit);
   }, [orbit, setResults, tab]);
 
-  // const graphProps = { orbit };
   const controlProps = { number, setNumber, bigNumber, setBigNumber };
   const tableProps = { number, bigNumber, steps, peak, tab };
   const tabsProps = { controlProps, tableProps, tab, setTab };

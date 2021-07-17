@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
+import orbit from "@/types/unions/orbit";
+
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 
-import collatzOrbitToCSV from "../../../services/formatCollatz/collatzOrbitToCSV";
+import collatzOrbitToCSV from "@/services/formatCollatz/collatzOrbitToCSV";
 import CopyClipboardButton from "./CopyClipboardButton";
 import ResultsTextField from "./ResultsTextField";
 
@@ -33,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface ICRTAProps {
-  results: number[] | bigint[];
+  results: orbit;
 }
 
 function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
