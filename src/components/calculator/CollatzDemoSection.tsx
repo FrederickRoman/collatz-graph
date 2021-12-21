@@ -33,8 +33,8 @@ function CollatzDemoSection(): JSX.Element {
     <>
       <GraphErrorBoundary>
         <Container>
-          <Box m={"1em"}>
-            <Grid container justifyContent={"center"} alignItems={"center"}>
+          <Box m="1em">
+            <Grid container justifyContent="center" alignItems="center">
               <Grid item xs={12} sm={12} md={6}>
                 <CollatzChart orbit={orbit} />
               </Grid>
@@ -46,7 +46,7 @@ function CollatzDemoSection(): JSX.Element {
       <Container>
         <Grid container className={classes.root} spacing={2}>
           <Grid item xs={12} sm={6}>
-            <Box m={"1em"}>
+            <Box m="1em">
               <CollatzPanel
                 setResults={setResults}
                 orbit={orbit}
@@ -55,7 +55,7 @@ function CollatzDemoSection(): JSX.Element {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Box m={"1em"}>
+            <Box m="1em">
               <CollatzResultsTextArea results={results} />
             </Box>
           </Grid>

@@ -16,18 +16,18 @@ const styles: IStyles = {
 
 function BannerTextSection(): JSX.Element {
   return (
-    <Grid container justifyContent={"center"} alignItems={"center"}>
+    <Grid container justifyContent="center" alignItems="center">
       <Grid item>
         <Box px={1}>
           <Grid
             container
-            justifyContent={"center"}
-            alignItems={"center"}
-            wrap={"nowrap"}
+            justifyContent="center"
+            alignItems="center"
+            wrap="nowrap"
           >
             <Grid item>
               <img
-                src={"/img/collatzgraphLogo.svg"}
+                src="/img/collatzgraphLogo.svg"
                 alt="collatzGraph logo"
                 width="40"
                 height="40"
@@ -42,7 +42,7 @@ function BannerTextSection(): JSX.Element {
 
       <Grid item>
         <Box px={1}>
-          <Grid container justifyContent={"center"} alignItems={"center"}>
+          <Grid container justifyContent="center" alignItems="center">
             <Grid item>
               <h2 style={styles.subheader}>
                 In-browser collatz graph calculator

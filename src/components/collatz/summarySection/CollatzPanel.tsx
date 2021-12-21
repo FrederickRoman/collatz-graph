@@ -95,7 +95,7 @@ function CollatzPanel(props: ICollatzPanelProps) {
   const tableProps = { number, bigNumber, steps, peak, tab };
   const tabsProps = { controlProps, tableProps, tab, setTab };
   return (
-    <Grid container justifyContent={"center"} alignItems={"center"}>
+    <Grid container justifyContent="center" alignItems="center">
       <Grid item>
         <Box mt={5}>
           <Paper elevation={3} style={{ width: 310 }}>
