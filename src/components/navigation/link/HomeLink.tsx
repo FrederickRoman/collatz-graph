@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Typography from "@material-ui/core/Typography";
 import Link from "next/link";
 import IStyles from "@/types/interfaces/IStyles";
-import Box from "@material-ui/core/Box";
+import { Box, Typography } from "@mui/material";
 
 const styles: IStyles = {
   mainBar_header: {
