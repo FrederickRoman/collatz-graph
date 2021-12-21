@@ -9,7 +9,7 @@ function Home(): JSX.Element {
   return (
     <Container disableGutters>
       <HeroBanner />
-      <Box m={"1em"}>
+      <Box mx={"1em"} my={10}>
         <CollatzDemoSection />
       </Box>
     </Container>
