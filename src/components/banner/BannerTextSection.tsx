@@ -1,5 +1,5 @@
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 import IStyles from "@/types/interfaces/IStyles";
 

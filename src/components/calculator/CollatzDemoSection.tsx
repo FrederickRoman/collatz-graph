@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import orbit from "@/types/unions/orbit";
 
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 import GraphErrorBoundary from "@/components/errorHandling/boundaries/GraphErrorBoundary";
 import CollatzPanel from "@/components/collatz/summarySection/CollatzPanel";

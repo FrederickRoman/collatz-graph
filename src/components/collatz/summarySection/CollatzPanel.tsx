@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import fromExponential from "from-exponential";
 
-import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 import collatzCompute from "@/services/computeCollatz/collatzSafeInt";
 import collatzBigInt from "@/services/computeCollatz/collatzBigInt.js";

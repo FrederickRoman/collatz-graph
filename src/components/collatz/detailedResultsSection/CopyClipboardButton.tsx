@@ -1,8 +1,11 @@
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
 
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

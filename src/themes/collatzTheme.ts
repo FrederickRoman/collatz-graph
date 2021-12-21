@@ -1,8 +1,8 @@
-import { createTheme, Theme } from "@material-ui/core/styles";
+import { createTheme, Theme, adaptV4Theme } from "@mui/material/styles";
 
-import brown from "@material-ui/core/colors/brown";
+import { brown } from '@mui/material/colors';
 
-const collatzTheme: Theme = createTheme({
+const collatzTheme: Theme = createTheme(adaptV4Theme({
   palette: {
     background: {
       default: '#52524f'
@@ -14,6 +14,6 @@ const collatzTheme: Theme = createTheme({
       main: brown[300],
     },
   },
-});
+}));
 
 export default collatzTheme;

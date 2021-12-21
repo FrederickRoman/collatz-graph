@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 import CollatzControls from "./CollatzControls.js";
 import CollatzBigNumberField from "./CollatzBigNumberField.js";
 
-import IconButton from "@material-ui/core/IconButton";
-import TrendingDownIcon from "@material-ui/icons/TrendingDown";
+import IconButton from "@mui/material/IconButton";
+import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 
-import Container from "@material-ui/core/Container";
+import Container from "@mui/material/Container";
 
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -116,7 +116,7 @@ export default function TabsWrappedLabel({ controlProps, tab, setTab }) {
             aria-label="run graph"
             color="secondary"
             onMouseDown={handleMouseDown}
-          >
+            size="large">
             <TrendingDownIcon />
           </IconButton>
         </Container>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
+import makeStyles from '@mui/styles/makeStyles';
+import TextField from "@mui/material/TextField";
 
 import fromExponential from "from-exponential";
 
@@ -59,7 +59,7 @@ function CollatzBigNumberField({ bigNumber, tab, value, setValue }) {
     <form className={classes.root} noValidate autoComplete="off">
       <TextField
         multiline
-        rowsMax={4}
+        maxRows={4}
         error={error}
         id="Number"
         label="Number"

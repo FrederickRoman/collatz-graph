@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import BannerTextSection from "./BannerTextSection";
-import Grid from "@material-ui/core/Grid";
+import Grid from "@mui/material/Grid";
 
 import IStyles from "@/types/interfaces/IStyles";
 

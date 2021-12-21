@@ -1,7 +1,10 @@
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
 
-import Box from "@material-ui/core/Box";
-import TextField from "@material-ui/core/TextField";
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

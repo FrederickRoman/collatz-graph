@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
+
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
 
 import orbit from "@/types/unions/orbit";
 
-import Paper from "@material-ui/core/Paper";
-import Container from "@material-ui/core/Container";
+import Paper from "@mui/material/Paper";
+import Container from "@mui/material/Container";
 
 import collatzOrbitToCSV from "@/services/formatCollatz/collatzOrbitToCSV";
 import CopyClipboardButton from "./CopyClipboardButton";
