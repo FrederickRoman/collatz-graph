@@ -8,6 +8,7 @@ import createCache from '@emotion/cache';
 import theme from '../src/themes/collatzTheme';
 
 import MainAppBar from "../src/components/navigation/MainAppBar.tsx";
+import MainFooter from "../src/components/footer/MainFooter.tsx";
 
 const cache = createCache({
   key: 'css',
@@ -29,6 +30,7 @@ export default function MyApp(props) {
           <CssBaseline />
           <MainAppBar />
           <Component {...pageProps} />
+          <MainFooter/>
         </ThemeProvider>
       </StyledEngineProvider>
     </CacheProvider>
