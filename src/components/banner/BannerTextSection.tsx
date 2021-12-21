@@ -34,7 +34,7 @@ function BannerTextSection(): JSX.Element {
               />
             </Grid>
             <Grid item>
-              <h1 style={styles.header}>Collatzgraph</h1>
+              <h1 style={styles.header}>Collatz Graph</h1>
             </Grid>
           </Grid>
         </Box>
