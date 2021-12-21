@@ -84,9 +84,10 @@ export default function TabsWrappedLabel({ controlProps, tab, setTab }) {
           onChange={handleChange}
           aria-label="wrapped label tabs example"
           classes={{ flexContainer: classes.tabs_container }}
+          sx={{backgroundColor:"gray"}}
         >
           <Tab value="small" label="Small" wrapped {...a11yProps("small")} />
-          <Tab value="big" label={<BigLabel />} {...a11yProps("big")} />
+          <Tab value="big" label={<BigLabel />} {...a11yProps("big")}  />
         </Tabs>
       </AppBar>
       <TabPanel value={tab} index="small">
