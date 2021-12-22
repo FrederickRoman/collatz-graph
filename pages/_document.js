@@ -16,7 +16,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="description"
+            content="Collatz Graph: Calculate, test and graph the collatz conjecture for big numbers in your own browser."
+          />
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
