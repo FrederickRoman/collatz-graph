@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Theme } from "@mui/material/styles";
 
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import makeStyles from "@mui/styles/makeStyles";
+import createStyles from "@mui/styles/createStyles";
 
 import orbit from "@/types/unions/orbit";
 
@@ -12,6 +12,7 @@ import Container from "@mui/material/Container";
 import collatzOrbitToCSV from "@/services/formatCollatz/collatzOrbitToCSV";
 import CopyClipboardButton from "./CopyClipboardButton";
 import ResultsTextField from "./ResultsTextField";
+import { Grid } from "@mui/material";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       color: theme.palette.text.secondary,
       width: 310,
-      height: 625,
+      height: 728,
       padding: theme.spacing(2),
       margin: "1em 0em",
     },
@@ -65,7 +66,13 @@ function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
             showClipboard={showClipboard}
             value={value}
           />
-          {showClipboard && <CopyClipboardButton textFieldRef={textFieldRef} />}
+          {showClipboard && (
+            <Grid container justifyContent="center" alignItems="center">
+              <Grid item>
+                <CopyClipboardButton textFieldRef={textFieldRef} />
+              </Grid>
+            </Grid>
+          )}
         </Container>
       </Paper>
     </div>
