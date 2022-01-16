@@ -1,5 +1,5 @@
 /* global BigInt */
-console.log("Inside Collatz BigInt");
+// console.log("Inside Collatz BigInt");
 
 const NUM_OF_STEPS_MAX_LIMIT = 10000;
 const nextSeqStep = (n) => (n % 2n === 0n ? n / 2n : 3n * n + 1n);
@@ -16,7 +16,7 @@ function collaztCompute(start) {
     console.log(startOrbitStep);
     while (i < NUM_OF_STEPS_MAX_LIMIT && curOrbitStep !== 1n) {
       nextOrbitStep = nextSeqStep(curOrbitStep);
-      console.log(nextOrbitStep);
+      // console.log(nextOrbitStep);
       orbitArray.push(nextOrbitStep);
       curOrbitStep = nextOrbitStep;
       i++;

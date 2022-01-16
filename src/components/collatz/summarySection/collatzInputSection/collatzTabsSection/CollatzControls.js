@@ -21,10 +21,10 @@ function CollatzControls({ number, setNumber, tab }) {
   const [error, setError] = useState(false);
   const [helperText, setHelperText] = useState("");
 
-  useEffect(() => {
-    console.log(number);
-    console.log(typeof number);
-  }, [number]);
+  // useEffect(() => {
+  //   console.log(number);
+  //   console.log(typeof number);
+  // }, [number]);
 
   const validateInput = (value) => {
     if (value === "") {

@@ -84,7 +84,7 @@ function CollatzPanel(props: ICollatzPanelProps) {
   }, [tab, setOrbit]);
 
   useEffect(() => {
-    console.log(orbit);
+    // console.log(orbit);
     const numOrbit = orbit.map((o: number | bigint) => Number(o));
     setPeak(Math.max(...numOrbit));
     setSteps(numOrbit.length - 1);

@@ -1,5 +1,5 @@
 /* global BigInt */
-console.log("web worker");
+// console.log("web worker"); 
 var NUM_OF_STEPS_MAX_LIMIT = 100000;
 function nextSeqStep(n) {
     if (n % 2n === 0n) {

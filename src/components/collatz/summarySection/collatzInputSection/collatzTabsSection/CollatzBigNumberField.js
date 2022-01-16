@@ -23,16 +23,16 @@ function CollatzBigNumberField({ bigNumber, tab, value, setValue }) {
   const [helperText, setHelperText] = useState("");
 
   const validateInput = (value) => {
-    console.log(`Big int value: ${value}`);
+    // console.log(`Big int value: ${value}`);
     if (value === "") {
-      console.log(`Big int value: ""`);
+      // console.log(`Big int value: ""`);
       setError(true);
       setHelperText("Number required (e.g. 5, 3e4)");
       return value;
     } else {
       const expStringNumber = fromExponential(value);
       if (!new RegExp("^\\d+$").test(expStringNumber)) {
-        console.log(`Big int value: not just digits`);
+        // console.log(`Big int value: not just digits`);
         setError(true);
         setHelperText(
           "Wrong Format. Number must be positive decimal or exponential (e.g. 5, 3e4)"
@@ -51,9 +51,9 @@ function CollatzBigNumberField({ bigNumber, tab, value, setValue }) {
     if (tab === "big") setValue(validateInput(value));
   };
 
-  useEffect(() => {
-    console.log(bigNumber);
-  }, [bigNumber]);
+  // useEffect(() => {
+  //   console.log(bigNumber);
+  // }, [bigNumber]);
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
