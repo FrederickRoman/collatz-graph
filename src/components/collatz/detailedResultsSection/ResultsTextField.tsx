@@ -5,6 +5,7 @@ import { Theme } from "@mui/material/styles";
 
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { Grid } from "@mui/material";
 
 // const useStyles = makeStyles((theme: Theme) =>
 //   createStyles({
@@ -27,20 +28,27 @@ function ResultsTextField(props: IResultsTextAreaProps): JSX.Element {
   // const classes = useStyles();
   return (
     <Box px={1} py={1}>
-      <Box component="form" noValidate autoComplete="off" sx={{ margin: 1 }}>
-        <div>
-          <TextField
-            id="outlined-multiline-flexible"
-            label="Raw CSV data"
-            multiline
-            fullWidth
-            rows={showClipboard ? 25 : 28}
-            value={value}
-            variant="outlined"
-            inputRef={textFieldRef}
-          />
-        </div>
-      </Box>
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item>
+          <Box
+            component="form"
+            noValidate
+            autoComplete="off"
+            width="100%"
+          >
+            <TextField
+              id="outlined-multiline-flexible"
+              label="Raw CSV data"
+              multiline
+              fullWidth
+              rows={showClipboard ? 25 : 28}
+              value={value}
+              variant="outlined"
+              inputRef={textFieldRef}
+            />
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

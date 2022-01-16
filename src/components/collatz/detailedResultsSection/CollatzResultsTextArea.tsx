@@ -64,7 +64,7 @@ function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
         sx={{
           textAlign: "center",
           color: "palette.text.secondary",
-          width: 310,
+          //width: 310,
           height: 728,
           padding: 2,
           margin: "1em 0em",
