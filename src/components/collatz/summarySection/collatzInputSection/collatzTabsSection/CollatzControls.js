@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
-import makeStyles from '@mui/styles/makeStyles';
+// import makeStyles from "@mui/styles/makeStyles";
 import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    margin: "1em",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: "flex",
+//     flexWrap: "wrap",
+//     justifyContent: "center",
+//     margin: "1em",
+//     "& > *": {
+//       margin: theme.spacing(1),
+//       width: "25ch",
+//     },
+//   },
+// }));
 
 function CollatzControls({ number, setNumber, tab }) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [error, setError] = useState(false);
   const [helperText, setHelperText] = useState("");
 
@@ -51,7 +52,7 @@ function CollatzControls({ number, setNumber, tab }) {
   };
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <Box component="form" noValidate autoComplete="off">
       <TextField
         error={error}
         id="Number"
@@ -65,7 +66,7 @@ function CollatzControls({ number, setNumber, tab }) {
         onChange={handleChange}
         variant="outlined"
       />
-    </form>
+    </Box>
   );
 }
 

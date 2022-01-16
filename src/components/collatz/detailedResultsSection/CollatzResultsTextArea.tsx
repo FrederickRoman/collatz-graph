@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Theme } from "@mui/material/styles";
+// import { Theme } from "@mui/material/styles";
 
-import makeStyles from "@mui/styles/makeStyles";
-import createStyles from "@mui/styles/createStyles";
+// import makeStyles from "@mui/styles/makeStyles";
+// import createStyles from "@mui/styles/createStyles";
 
 import orbit from "@/types/unions/orbit";
 
@@ -12,31 +12,31 @@ import Container from "@mui/material/Container";
 import collatzOrbitToCSV from "@/services/formatCollatz/collatzOrbitToCSV";
 import CopyClipboardButton from "./CopyClipboardButton";
 import ResultsTextField from "./ResultsTextField";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      margin: "1em 0em",
-      "& > *": {
-        margin: theme.spacing(1),
-        width: theme.spacing(16),
-        height: theme.spacing(16),
-      },
-    },
-    paper: {
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-      width: 310,
-      height: 728,
-      padding: theme.spacing(2),
-      margin: "1em 0em",
-    },
-  })
-);
+// const useStyles = makeStyles((theme: Theme) =>
+//   createStyles({
+//     root: {
+//       display: "flex",
+//       flexWrap: "wrap",
+//       justifyContent: "center",
+//       margin: "1em 0em",
+//       "& > *": {
+//         margin: theme.spacing(1),
+//         width: theme.spacing(16),
+//         height: theme.spacing(16),
+//       },
+//     },
+//     paper: {
+//       textAlign: "center",
+//       color: theme.palette.text.secondary,
+//       width: 310,
+//       height: 728,
+//       padding: theme.spacing(2),
+//       margin: "1em 0em",
+//     },
+//   })
+// );
 
 interface ICRTAProps {
   results: orbit;
@@ -44,7 +44,7 @@ interface ICRTAProps {
 
 function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
   const { results } = props;
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const [value, setValue] = useState<string>("");
   const [showClipboard, setShowClipboard] = useState<boolean>(false);
@@ -58,8 +58,18 @@ function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
   useEffect(() => setValue(collatzOrbitToCSV(results)), [results]);
 
   return (
-    <div className={classes.root}>
-      <Paper elevation={3} className={classes.paper}>
+    <Box>
+      <Paper
+        elevation={3}
+        sx={{
+          textAlign: "center",
+          color: "palette.text.secondary",
+          width: 310,
+          height: 728,
+          padding: 2,
+          margin: "1em 0em",
+        }}
+      >
         <Container>
           <ResultsTextField
             textFieldRef={textFieldRef}
@@ -75,7 +85,7 @@ function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
           )}
         </Container>
       </Paper>
-    </div>
+    </Box>
   );
 }
 

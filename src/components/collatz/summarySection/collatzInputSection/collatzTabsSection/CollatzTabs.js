@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import makeStyles from '@mui/styles/makeStyles';
+// import makeStyles from "@mui/styles/makeStyles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -46,18 +46,18 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-  tabs_container: {
-    justifyContent: "space-evenly",
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     flexGrow: 1,
+//     backgroundColor: theme.palette.background.paper,
+//   },
+//   tabs_container: {
+//     justifyContent: "space-evenly",
+//   },
+// }));
 
 export default function TabsWrappedLabel({ controlProps, tab, setTab }) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const { bigNumber, setBigNumber } = controlProps;
   const [valueSync, setValueSync] = useState(true);
   const [value, setValue] = useState(bigNumber);
@@ -77,17 +77,17 @@ export default function TabsWrappedLabel({ controlProps, tab, setTab }) {
   };
 
   return (
-    <div className={classes.root}>
+    <Box flexGrow={1} bgcolor="palette.background.paper">
       <AppBar position="static">
         <Tabs
           value={tab}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
-          classes={{ flexContainer: classes.tabs_container }}
-          sx={{backgroundColor:"gray"}}
+          // classes={{ flexContainer: classes.tabs_container }}
+          sx={{ backgroundColor: "gray", justifyContent: "space-evenly" }}
         >
           <Tab value="small" label="Small" wrapped {...a11yProps("small")} />
-          <Tab value="big" label={<BigLabel />} {...a11yProps("big")}  />
+          <Tab value="big" label={<BigLabel />} {...a11yProps("big")} />
         </Tabs>
       </AppBar>
       <TabPanel value={tab} index="small">
@@ -117,11 +117,12 @@ export default function TabsWrappedLabel({ controlProps, tab, setTab }) {
             aria-label="run graph"
             color="secondary"
             onMouseDown={handleMouseDown}
-            size="large">
+            size="large"
+          >
             <TrendingDownIcon />
           </IconButton>
         </Container>
       </TabPanel>
-    </div>
+    </Box>
   );
 }

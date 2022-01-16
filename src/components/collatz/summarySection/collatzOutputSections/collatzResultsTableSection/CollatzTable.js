@@ -1,5 +1,5 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,14 +8,14 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 250,
-  },
-});
+// const useStyles = makeStyles({
+//   table: {
+//     minWidth: 250,
+//   },
+// });
 
 function CollatzTable({ number, bigNumber, steps, peak, tab }) {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const TableRows = () => {
     const isNumberEmpty = number === "";
@@ -34,7 +34,7 @@ function CollatzTable({ number, bigNumber, steps, peak, tab }) {
 
   return (
     <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="results table">
+      <Table aria-label="results table" sx={{ minWidth: 250 }}>
         <TableHead>
           <TableRow>
             <TableCell>Number</TableCell>
