@@ -16,8 +16,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="robots" content="index, follow" />
           <meta
             name="description"
