@@ -1,31 +1,48 @@
-# Next.js example
+# Collatz graph
 
-## How to use
+<div style="display:flex; flex-direction:column;"><img src="https://github.com/FrederickRoman/collatz-graph/blob/main/public/img/collatzgraphLogo_red.svg" alt="Collatz graph logo" height="320"/>
+</div>
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+## In-browser Collatz conjecture graph calculator 
 
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/next | tar -xz --strip=2  material-ui-next/examples/nextjs
-cd nextjs
+This is an interactive app to visualize the rise and fall of graph of the [Collatz Conjecture.](https://en.wikipedia.org/wiki/Collatz_conjecture)
+
+<div style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://github.com/FrederickRoman/Carscore/blob/main/docs/mockups/Collatz_Home_iPhone_5_SE.png" height="300" alt="Collatz conjecture home page iPhone mockup"/>
+    <img src="https://github.com/FrederickRoman/Carscore/blob/main/docs/mockups/Collatz_Home_iPad.png" height="300" alt="Collatz conjecture home page iPad mockup"/>
+</div>
+
+## Live website
+
+See [Collatz graph](https://collatz-graph.vercel.app).
+
+## Main libraries used for this project
+
++ Next.js (JS & TS)
++ MUI
++ from-exponential
++ chart.js
+
+## Project setup
+
+```
+npm install
 ```
 
-Install it and run:
+### Compiles and hot-reloads
 
-```sh
-npm install
+```
 npm run dev
 ```
 
-or:
+### Compiles and minifies for production
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/HEAD/examples/nextjs)
+```
+npm run build
+```
 
-## The idea behind the example
+### Lints and fixes files
 
-The project uses [Next.js](https://github.com/zeit/next.js), which is a framework for server-rendered React apps. It includes `@material-ui/core` and its peer dependencies, including `emotion`, the default style engine in Material-UI v5. If you prefer, you can [use styled-components instead](https://next.material-ui.com/guides/interoperability/#styled-components).
-
-## The link component
-
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with Material-UI.
-More information [in the documentation](https://next.material-ui.com/guides/routing/#next-js).
+```
+npm run lint
+```
