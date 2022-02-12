@@ -1,6 +1,6 @@
 import Container from "@mui/material/Container";
 
-function About() {
+function About(): JSX.Element {
   return <Container maxWidth="sm">Coming soon!</Container>;
 }
 
