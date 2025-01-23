@@ -39,8 +39,8 @@
     "url": "https://frederickroman.com/"
   },
   "engines": {
-    "node": "14.x",
-    "npm": "7.x"
+    "node": "20.x",
+    "npm": "8.x"
   },
   "private": true
 }
