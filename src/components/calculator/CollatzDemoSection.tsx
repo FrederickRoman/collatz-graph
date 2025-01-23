@@ -1,7 +1,4 @@
 import { useState } from "react";
-// import { Theme } from "@mui/material/styles";
-
-// import makeStyles from "@mui/styles/makeStyles";
 
 import orbit from "@/types/unions/orbit";
 
@@ -14,16 +11,6 @@ import CollatzPanel from "@/components/collatz/summarySection/CollatzPanel";
 import CollatzResultsTextArea from "@/components/collatz/detailedResultsSection/CollatzResultsTextArea";
 import CollatzChart from "@/components/collatz/summarySection/collatzOutputSections/collatzGraphSection/CollatzChart";
 
-// const useStyles = makeStyles((theme: Theme) => ({
-//   // root: {
-//   //   flexGrow: 1,
-//   // },
-//   paper: {
-//     padding: theme.spacing(2),
-//     textAlign: "center",
-//     color: theme.palette.text.secondary,
-//   },
-// }));
 
 function CollatzDemoSection(): JSX.Element {
   const DEFAULT_ORBIT: orbit = [5, 16, 8, 4, 2, 1];
