@@ -1,8 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// import { Theme } from "@mui/material/styles";
-
-// import makeStyles from "@mui/styles/makeStyles";
-// import createStyles from "@mui/styles/createStyles";
 
 import orbit from "@/types/unions/orbit";
 
@@ -14,37 +10,12 @@ import CopyClipboardButton from "./CopyClipboardButton";
 import ResultsTextField from "./ResultsTextField";
 import { Box, Grid } from "@mui/material";
 
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     root: {
-//       display: "flex",
-//       flexWrap: "wrap",
-//       justifyContent: "center",
-//       margin: "1em 0em",
-//       "& > *": {
-//         margin: theme.spacing(1),
-//         width: theme.spacing(16),
-//         height: theme.spacing(16),
-//       },
-//     },
-//     paper: {
-//       textAlign: "center",
-//       color: theme.palette.text.secondary,
-//       width: 310,
-//       height: 728,
-//       padding: theme.spacing(2),
-//       margin: "1em 0em",
-//     },
-//   })
-// );
-
 interface ICRTAProps {
   results: orbit;
 }
 
 function CollatzResultsTextArea(props: ICRTAProps): JSX.Element {
   const { results } = props;
-  // const classes = useStyles();
 
   const [value, setValue] = useState<string>("");
   const [showClipboard, setShowClipboard] = useState<boolean>(false);
